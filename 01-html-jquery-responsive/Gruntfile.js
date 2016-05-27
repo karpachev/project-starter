@@ -21,12 +21,45 @@ module.exports = function(grunt) {
 		      'public/css/main.min.css': ['public/css/main.css']
 		    }
 		  }
-		}		
+		},
+		watch: {
+		  css: {
+		    files: ['public/css/main.less','**.js'],
+		    tasks: ['less','cssmin'],
+		    options: {
+		      spawn: false,
+		      livereload: true
+		    }
+		  },
+		  scripts: {
+		    files: ['**.js'],
+		    tasks: [],
+		    options: {
+		      spawn: false,
+		      livereload: true
+		    }
+		  },	
+	  	  ejs_templates: {
+		    files: ['views/**/*.ejs'],
+		    options: {
+		      spawn: false,
+		      livereload: true
+		    }
+		  },			  	  
+		  configFiles: {
+		    files: [ 'Gruntfile.js' ],
+		    options: {
+		      reload: true
+		    }
+		  }		  
+		}	
 	});
 
 
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['less', 'cssmin']);
+
+	grunt.registerTask('default', ['less', 'cssmin', 'watch']);
 }

@@ -17,6 +17,9 @@ app.get("/about", function(req,res) {
 app.get("/help", function(req,res) {
 	res.render('help', {title:"Help"});
 });
+app.get("/login", function(req,res) {
+	res.render('login', {title:"Login"});
+});
 
 app.use( express.static("public") );
 
