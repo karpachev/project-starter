@@ -8,8 +8,6 @@ var compression = require('compression');
 app.set('view engine', 'ejs');
 app.use(compression());
 
-
-
 app.get("/", function(req,res) {
 	res.render('index', {title:"Home"});
 });
