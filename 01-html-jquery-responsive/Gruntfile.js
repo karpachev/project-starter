@@ -7,7 +7,8 @@ module.exports = function(grunt) {
 		      paths: ['public/css']
 		    },
 		    files: {
-		      'public/css/main.css': 'public/css/main.less'
+		      'public/css/main.css': 'public/css/main.less',
+		      'public/css/main_include_body.css': 'public/css/main_include_body.less'
 		    }
 		  }
 		},
@@ -18,7 +19,8 @@ module.exports = function(grunt) {
 		  },
 		  development: {
 		    files: {
-		      'public/css/main.min.css': ['public/css/main.css']
+		      'public/css/main.min.css': ['public/css/main.css'],
+		      'public/css/main_include_body.min.css': ['public/css/main_include_body.css']
 		    }
 		  }
 		},

@@ -5,11 +5,22 @@
         <article>
             <header>
                 <h1>Login</h1>
-                <p><input type="text"></p>
+                
+                <form action="/login" method="post">
+                <p>
+                    <label for="username">User name:</label><br>
+                    <input type="text" id="username" name="username">
+                </p>
+                <p>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password">
+                </p>
+                <input type="submit" value="Login">
+                </form>
             </header>
             <section>
-                <h2>article section h2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                <h2>You can also login with your social profile</h2>
+                <p>Choose one of:</p>
             </section>
         </article>
         <aside>
