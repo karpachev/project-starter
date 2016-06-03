@@ -1,3 +1,4 @@
 This is template for a static HTML site:
-- bootstrap
-- jquery
+- bootstrap from MaxCDN
+- requirejs
+- async load with RequireJS - jquery and bootstrap
