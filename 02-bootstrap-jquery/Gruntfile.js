@@ -1,6 +1,11 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		banner: '/*!\n' +
+	            ' * Project Starter v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+	            ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+	            ' * Licensed under the <%= pkg.license %> license\n' +
+	            ' */\n',		
 		less: {
 		  development: {
 		    options: {
