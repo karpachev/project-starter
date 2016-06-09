@@ -13,8 +13,10 @@ var session = require('express-session')
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 app.use(compression());
+app.use(cookieParser());
 
 app.get("/", function(req,res) {
+	console.log(req.cookies);
 	res.render('index', {title:"Home"});
 });
 
