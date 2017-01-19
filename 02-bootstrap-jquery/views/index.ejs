@@ -1303,6 +1303,7 @@
               document.getElementsByTagName("head")[0].appendChild(fileref)
       }
       window.onload= function() {
+        console.log("onload")
         loadjscssfile("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
         loadjscssfile("/css/ie10-viewport-bug-workaround.css", "css")
         loadjscssfile("/js/ie10-viewport-bug-workaround.js")
